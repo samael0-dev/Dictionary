@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <head>
+        <title>My Dictionary</title>
+        <link rel="icon" type="image/png" href="imges/logo.png">
+        <link rel="stylesheet" href="/styles/index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" src="/styles/index.css" >
+    </head>
+        
+    <body>
+        <div class="header">
+            <img id="logo" src="imges/logo.png">
+            <div class="title">
+                An online dictionary which helps to find meaning of words.
+            </div>
+        </div>
+        <div class="container">
+                <div class="search-container">
+                    <input class="search-bar" id="searchInput" type="text" placeholder="Type your word here..." />
+                    <button class="search-button" onclick="onSearch();">Search</button>
+                </div>
+            <div class="answer">
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p>© 2024 My Dictionary. All rights reserved.</p>
+        </footer>
+        <script>
+            const onSearch = ()=>{
+                let search = document.querySelector('#searchInput').value;
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://api.dictionaryapi.dev/api/v2/entries/en/' + search);
+                xhr.send();
+                xhr.onload = function() {
+                    if (xhr.status != 200) {
+                        alert(`Error ${xhr.status}: ${xhr.statusText} Please enter a valid response!!`);
+                    } else {
+                        let data = JSON.parse(xhr.response);
+                        console.log(data);
+                        document.querySelector(".answer").innerHTML = 'Definition: ' + data[0].meanings[0].definitions[0].definition;
+                    }
+                };
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,229 @@
+@media(max-width: 768px) {
+    body {
+        font-family: "Oswald", sans-serif;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        top: 40%;
+        gap:30px;
+        flex-direction: column;
+    }
+
+    #footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        text-align: center;
+        color: white;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    #logo {
+        height: 30%;
+        width: 40%;
+    }
+
+    .search-container {
+        display: flex;
+        width: 80%;
+        gap: 8px;
+        flex-direction: row;
+    }
+
+    .search-bar {
+        height: 40px;
+        width: 110%;
+        border-radius: 20px;
+        border: solid;
+        padding-left: 10px;
+    }
+
+    .search-button {
+        border-radius: 20px;
+        font-family: "Oswald", sans-serif;
+        border: solid black;
+        height: 48px;
+        width: 40%;
+        color: white;
+        background-color: green;
+    }
+
+    .answer {
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1199px) {
+    body {
+        font-family: "Oswald", sans-serif;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        top: 40%;
+        gap:30px;
+        flex-direction: column;
+    }
+
+    #footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        text-align: center;
+        color: white;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 70px;
+    }
+
+    #logo {
+        height: 20%;
+        width: 30%;
+    }
+
+    .search-container {
+        display: flex;
+        width: 50%;
+        gap: 8px;
+        flex-direction: row;
+    }
+
+    .search-bar {
+        height: 40px;
+        width: 110%;
+        border-radius: 20px;
+        border: solid;
+        padding-left: 10px;
+    }
+
+    .search-button {
+        border-radius: 20px;
+        font-family: "Oswald", sans-serif;
+        border: solid black;
+        height: 48px;
+        width: 20%;
+        color: white;
+        background-color: green;
+    }
+
+    .answer {
+        display: flex;
+        font-size: 35px;
+        justify-content: center;
+    }
+
+}
+
+
+@media(min-width: 1200px) {
+    body {
+        font-family: "Oswald", sans-serif;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        top: 40%;
+        gap:30px;
+        flex-direction: column;
+    }
+
+    #footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        text-align: center;
+        color: white;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 70px;
+    }
+
+    #logo {
+        height: 20%;
+        width: 30%;
+    }
+
+    .search-container {
+        display: flex;
+        width: 50%;
+        gap: 8px;
+        flex-direction: row;
+    }
+
+    .search-bar {
+        height: 40px;
+        width: 110%;
+        border-radius: 20px;
+        border: solid;
+        padding-left: 10px;
+        transition: box-shadow 0.5s;
+    }
+
+    .search-button {
+        border-radius: 20px;
+        font-family: "Oswald", sans-serif;
+        border: solid black;
+        height: 48px;
+        width: 20%;
+        color: white;
+        background-color: green;
+        cursor: pointer;
+        transition: box-shadow 0.5s;
+    }
+
+    .search-button:hover {
+        box-shadow: 5px 5px black;
+        transition: box-shadow 0.5s;
+    }
+
+    .answer {
+        font-size: 35px;
+    }
+
+    .search-bar:hover {
+        box-shadow: 5px 5px;
+        transition: box-shadow 0.5s;
+    }
+}
